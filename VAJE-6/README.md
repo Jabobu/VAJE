@@ -10,8 +10,10 @@ Dokumentacija RPC api-ja: https://ethereum.github.io/execution-apis/api-document
 - Pošljemo request
 - Preverimo če je odgovor pravilen, ter shranimo odgovor v json (if pravilen)
 
-### Implementiraj kodo (pomagaj si z comments)
+#### Implementiraj kodo (pomagaj si z comments)
 ```python
+import requests
+import json
 # definiraj VARIABLE nase skripte
     # API URL od infure za Ethereum mainnet
 
@@ -31,7 +33,7 @@ Dokumentacija RPC api-ja: https://ethereum.github.io/execution-apis/api-document
     # else, sprintaj sporocilo da nam ni uspelo dobiti zadnji block in dodaj kateri error oz. code-status code smo dobili
 ```
 
-### Drugi del - delo s podatki (block_data.json)
+## Drugi del - delo s podatki (block_data.json)
 
 V bloku imamo del kjer so zapisane transakcije, naša naloga je, da preštejemo koliko je teh transakcij.
 
@@ -51,7 +53,7 @@ V bloku imamo del kjer so zapisane transakcije, naša naloga je, da preštejemo 
 ```
 
 
-###  Tretji del - DODATNA VAJA ni obezna - izluščimo vse naslove (from, to) iz transakcij
+##  Tretji del - DODATNA VAJA ni obezna - izluščimo vse naslove (from, to) iz transakcij
 
 V vsaki transakciji imamo definirana naslova pošiljalca ("from") in prejemnika ("to"). Naša naloga je, da izluščimo vse naslove in jih shranimo v dictionary kot ključe (key). Za vrednosti (value) pa zaenkrat zapisemo vrednost None.
 
@@ -68,12 +70,12 @@ V vsaki transakciji imamo definirana naslova pošiljalca ("from") in prejemnika 
 # sprintamo dictionary
 
 ```
-#### Četrti del - refactoring
+## Četrti del - refactoring
 
-Če je dovolj časa na vajah (lahko tudi doma) dajte bloke kod spraviti v funkcije in nato napisite se main() funkcijo ki klice funkcije v pravilnem vrstnem redu. Rezultat je bolj pregledna in modularna skripta.
+Do sedaj spisano kodo spravite v funkciji in nato napisite se main() funkcijo ki klice funkciji v pravilnem vrstnem redu. Rezultat je bolj pregledna in modularna skripta.
 
-- Kodo do zdaj spravi v funkcije / 3 funkcije
-- Napiši še dodatno funkcijo main() ki bo klicala dve funkciji v pravilnem vrstnem redu
+- Kodo do zdaj spravi v funkciji
+- Napiši še dodatno funkcijo main() ki bo klicala obe funkciji v pravilnem vrstnem redu
     - npr. 1. funkcija getBlock 2. funkcija steviloTransakcij ali izlusciNaslove
 
 
