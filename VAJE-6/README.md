@@ -4,6 +4,8 @@ Izdelali bomo preprost rpc client z uporabo knjižnice requests. Na koncu če bo
 
 Dokumentacija RPC api-ja: https://ethereum.github.io/execution-apis/api-documentation/
 
+Install requests library: pip install requests
+
 ## Prvi del - samostojna izdelava klienta (zaprosimo za zadnji blok)
 
 - Definiramo variable, ki so potrebne za request (POST)
